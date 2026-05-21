@@ -36,9 +36,6 @@ void main(){
     Sonar_init();
     PWM();
 
-    // --- wait for button press on RB0 (pull-up = HIGH, pressed = LOW) ---
-    //while((PORTB & 0x01) != 0);
-   // msdelay(3000);               // 3 second delay then start
 
     while(1){
         unsigned int ldr_val     = ADC_Read();
@@ -99,7 +96,7 @@ void main(){
                 msdelay(300);
 
             // too close to right wall -> steer left
-            } /*else if(right_dis < 8){
+            } else if(right_dis < 8){
                 Move_forward(70, 35);
                 msdelay(100);
 
@@ -109,7 +106,7 @@ void main(){
                 msdelay(100);
 
             // sweet spot -> go straight
-            } */else {
+            } else {
                 Move_forward(60, 60);
                 msdelay(150);
             }
