@@ -1,0 +1,21 @@
+main
+	__CC2DW
+		____DoICP
+	ADC_Init
+	Sonar_init
+	PWM
+	ADC_Read
+	Sonar_read_right
+		msdelay
+		usdelay
+		Div_16X16_U
+	Sonar_read_front
+		msdelay
+		usdelay
+		Div_16X16_U
+	Move_forward
+	msdelay
+	stop
+	servo_90
+		servo_pulse
+			usdelay
